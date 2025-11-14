@@ -1,0 +1,5 @@
+[bandit]
+exclude_dirs = ['/tests', '/venv', '/.venv', '/build', '/dist']
+skips = ['B101', 'B601']
+# B101: assert_used - asserts are OK in tests
+# B601: paramiko_calls - we're not using paramiko
