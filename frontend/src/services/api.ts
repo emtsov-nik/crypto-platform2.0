@@ -33,14 +33,31 @@ import type {
   TradeHistoryResponse,
 } from '../types'
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const API_BASE_URL = import.meta.env.VITE_API_URL || ''
 
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
+  timeout: 30000, // 30 seconds timeout
 })
+
+// Add response interceptor for better error handling
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.code === 'ERR_NETWORK') {
+      console.error('Network Error: Unable to connect to the backend API. Please ensure the backend server is running.')
+    } else if (error.code === 'ECONNABORTED') {
+      console.error('Request timeout: The request took too long to complete.')
+    } else if (error.response) {
+      // Server responded with error status
+      console.error(`API Error ${error.response.status}:`, error.response.data)
+    }
+    return Promise.reject(error)
+  }
+)
 
 // Market Data API
 export const marketApi = {
