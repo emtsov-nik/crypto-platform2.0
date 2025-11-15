@@ -84,8 +84,11 @@ docker-compose up -d
 - 💬 Telegram Bot: Search for your bot in Telegram (`/start`)
 - ❤️ Health Check: http://localhost:8000/api/health
 
+> **Note**: For local development without Docker, see [Local Development Setup](DEVELOPMENT_LOCAL.md)
+
 ## 📖 Documentation
 
+- [Local Development Setup](DEVELOPMENT_LOCAL.md) - Running without Docker
 - [Installation Guide](docs/INSTALLATION.md) - Detailed setup instructions
 - [User Guide](docs/USER_GUIDE.md) - How to use the platform
 - [Developer Guide](docs/DEVELOPER_GUIDE.md) - Development setup and architecture
