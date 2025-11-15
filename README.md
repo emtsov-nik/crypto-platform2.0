@@ -41,14 +41,26 @@ Full-featured cryptocurrency trading platform with backtesting, live trading, an
 
 ## 🚀 Quick Start
 
-### Prerequisites
+> **Want to get started immediately?** See [QUICKSTART.md](QUICKSTART.md) for automated setup!
 
-- Docker & Docker Compose
-- Python 3.11+ (for local development)
-- Node.js 18+ (for frontend development)
+### Automated Setup (Recommended)
+
+```bash
+./setup.sh   # Install and configure everything
+./run.sh     # Start the application
+```
+
+Then open http://localhost:5173
+
+### Manual Setup
+
+#### Prerequisites
+
+- Docker & Docker Compose OR
+- Python 3.11+ and Node.js 18+ (for local development)
 - Binance API keys ([Get them here](https://www.binance.com/en/my/settings/api-management))
 
-### Installation
+#### Installation
 
 1. **Clone the repository**
 ```bash
@@ -88,8 +100,12 @@ docker-compose up -d
 
 ## 📖 Documentation
 
+### Getting Started
+- [Quick Start Guide](QUICKSTART.md) - **Start here!** Automated setup in minutes
 - [Local Development Setup](DEVELOPMENT_LOCAL.md) - Running without Docker
 - [Installation Guide](docs/INSTALLATION.md) - Detailed setup instructions
+
+### Using the Platform
 - [User Guide](docs/USER_GUIDE.md) - How to use the platform
 - [Developer Guide](docs/DEVELOPER_GUIDE.md) - Development setup and architecture
 - [Strategy Examples](docs/STRATEGY_EXAMPLES.md) - How to create custom strategies
