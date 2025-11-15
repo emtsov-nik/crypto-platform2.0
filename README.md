@@ -41,14 +41,42 @@ Full-featured cryptocurrency trading platform with backtesting, live trading, an
 
 ## 🚀 Quick Start
 
-### Prerequisites
+Choose your preferred method:
 
-- Docker & Docker Compose
-- Python 3.11+ (for local development)
-- Node.js 18+ (for frontend development)
+### 🐳 Docker Desktop (Easiest - Recommended!)
+
+**Best for: Windows, Mac, or anyone who wants the simplest setup**
+
+```bash
+./docker-start.sh
+```
+
+Then open http://localhost:3000
+
+> See [DOCKER_DESKTOP_GUIDE.md](DOCKER_DESKTOP_GUIDE.md) for details
+
+### ⚡ Automated Local Setup
+
+**Best for: Linux developers who want local installation**
+
+```bash
+./setup.sh   # Install and configure everything
+./run.sh     # Start the application
+```
+
+Then open http://localhost:5173
+
+> See [QUICKSTART.md](QUICKSTART.md) for details
+
+### 🔧 Manual Setup
+
+#### Prerequisites
+
+- Docker & Docker Compose OR
+- Python 3.11+ and Node.js 18+ (for local development)
 - Binance API keys ([Get them here](https://www.binance.com/en/my/settings/api-management))
 
-### Installation
+#### Installation
 
 1. **Clone the repository**
 ```bash
@@ -84,9 +112,17 @@ docker-compose up -d
 - 💬 Telegram Bot: Search for your bot in Telegram (`/start`)
 - ❤️ Health Check: http://localhost:8000/api/health
 
+> **Note**: For local development without Docker, see [Local Development Setup](DEVELOPMENT_LOCAL.md)
+
 ## 📖 Documentation
 
-- [Installation Guide](docs/INSTALLATION.md) - Detailed setup instructions
+### Getting Started
+- [🐳 Docker Desktop Guide](DOCKER_DESKTOP_GUIDE.md) - **Easiest!** Works on Windows/Mac/Linux
+- [⚡ Quick Start Guide](QUICKSTART.md) - Automated local setup in 5 minutes
+- [🔧 Local Development Setup](DEVELOPMENT_LOCAL.md) - Manual setup without Docker
+- [📋 Installation Guide](docs/INSTALLATION.md) - Detailed setup instructions
+
+### Using the Platform
 - [User Guide](docs/USER_GUIDE.md) - How to use the platform
 - [Developer Guide](docs/DEVELOPER_GUIDE.md) - Development setup and architecture
 - [Strategy Examples](docs/STRATEGY_EXAMPLES.md) - How to create custom strategies

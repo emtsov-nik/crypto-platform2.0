@@ -30,7 +30,21 @@ export default function ChartPage() {
         onIndicatorsChange={setIndicators}
       />
       {isLoading && <div className="text-center py-8">Loading chart data...</div>}
-      {error && <div className="text-center py-8 text-red-500">Error loading data: {String(error)}</div>}
+      {error && (
+        <div className="text-center py-8">
+          <div className="bg-red-50 border border-red-200 rounded-lg p-4 max-w-2xl mx-auto">
+            <h3 className="text-red-700 font-semibold mb-2">Error loading data</h3>
+            <p className="text-red-600 text-sm mb-2">
+              {error instanceof Error && error.message.includes('Network Error')
+                ? 'Unable to connect to the backend API. Please ensure the backend server is running.'
+                : String(error)}
+            </p>
+            <p className="text-gray-600 text-xs">
+              Check the browser console for more details.
+            </p>
+          </div>
+        </div>
+      )}
       {data && data.data && data.data.length > 0 && (
         <div className="bg-white rounded-lg shadow p-4">
           <TradingChart data={data.data} symbol={symbol} timeframe={timeframe} showIndicators={indicators} />
