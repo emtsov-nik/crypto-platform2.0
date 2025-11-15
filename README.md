@@ -41,9 +41,23 @@ Full-featured cryptocurrency trading platform with backtesting, live trading, an
 
 ## 🚀 Quick Start
 
-> **Want to get started immediately?** See [QUICKSTART.md](QUICKSTART.md) for automated setup!
+Choose your preferred method:
 
-### Automated Setup (Recommended)
+### 🐳 Docker Desktop (Easiest - Recommended!)
+
+**Best for: Windows, Mac, or anyone who wants the simplest setup**
+
+```bash
+./docker-start.sh
+```
+
+Then open http://localhost:3000
+
+> See [DOCKER_DESKTOP_GUIDE.md](DOCKER_DESKTOP_GUIDE.md) for details
+
+### ⚡ Automated Local Setup
+
+**Best for: Linux developers who want local installation**
 
 ```bash
 ./setup.sh   # Install and configure everything
@@ -52,7 +66,9 @@ Full-featured cryptocurrency trading platform with backtesting, live trading, an
 
 Then open http://localhost:5173
 
-### Manual Setup
+> See [QUICKSTART.md](QUICKSTART.md) for details
+
+### 🔧 Manual Setup
 
 #### Prerequisites
 
@@ -101,9 +117,10 @@ docker-compose up -d
 ## 📖 Documentation
 
 ### Getting Started
-- [Quick Start Guide](QUICKSTART.md) - **Start here!** Automated setup in minutes
-- [Local Development Setup](DEVELOPMENT_LOCAL.md) - Running without Docker
-- [Installation Guide](docs/INSTALLATION.md) - Detailed setup instructions
+- [🐳 Docker Desktop Guide](DOCKER_DESKTOP_GUIDE.md) - **Easiest!** Works on Windows/Mac/Linux
+- [⚡ Quick Start Guide](QUICKSTART.md) - Automated local setup in 5 minutes
+- [🔧 Local Development Setup](DEVELOPMENT_LOCAL.md) - Manual setup without Docker
+- [📋 Installation Guide](docs/INSTALLATION.md) - Detailed setup instructions
 
 ### Using the Platform
 - [User Guide](docs/USER_GUIDE.md) - How to use the platform
